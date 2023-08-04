@@ -1,14 +1,18 @@
 import React from 'react';
-import Link from 'next/link';
+import Navigation from './Navigation';
+
+const navItems = [
+  { label: 'Home', link: '/' },
+  { label: 'Blog', link: '/blog' },
+  { label: 'About', link: '/about' },
+];
 
 const Header = () => {
   return (
     <header>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/blog">Blog</Link>
+      <Navigation navLinks={navItems} />
     </header>
-  )
-}
+  );
+};
 
 export default Header;

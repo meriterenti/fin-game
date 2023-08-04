@@ -1,20 +1,20 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import React from "react";
+import { Metadata } from 'next';
+import Link from 'next/link';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: 'Blog',
 };
 
 // by default the fetch is being cached, revalidate attr refetches after particualr time
 async function getData() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
     next: {
       revalidate: 60,
     },
   });
 
-  if (!response.ok) throw new Error("Smth went wrong");
+  if (!response.ok) throw new Error('Smth went wrong');
 
   return response.json();
 }

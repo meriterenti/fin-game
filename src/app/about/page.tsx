@@ -12,5 +12,3 @@ const About = () => (
 )
 
 export default About; 
-
-// 093432200 Susanna 
